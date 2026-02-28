@@ -735,3 +735,209 @@ footer {
   margin: 0;
 
 }
+
+/* =====================
+   13. RESPONSIVE
+   ===================== */
+
+/* ── Large tablets / small laptops (≤ 1200px) ── */
+@media (max-width: 1200px) {
+
+  /* 2-column video grid */
+  .videos-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 4 shorts instead of 5 */
+  .shorts-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Shrink search bar slightly */
+  .search {
+    max-width: 420px;
+  }
+}
+
+
+/* ── Tablets (≤ 960px) ── */
+@media (max-width: 960px) {
+
+  /* Collapse sidebar to icon-only rail */
+  .sidebar {
+    width: 72px;
+    padding: 8px 0;
+  }
+
+  /* Hide text labels */
+  .sidebar-item .label,
+  .sidebar-heading {
+    display: none;
+  }
+
+  /* Centre icons in rail */
+  .sidebar-item {
+    justify-content: center;
+    padding: 12px 0;
+    margin: 0 4px;
+    gap: 0;
+  }
+
+  /* Make icons slightly bigger when labels are gone */
+  .sidebar-section-I .sidebar-item .icon,
+  .sidebar-section-II .sidebar-item .icon {
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+
+  /* Sidebar height recalculates */
+  .sidebar {
+    height: calc(100vh - 104px);
+    top: 104px;
+  }
+
+  /* 3 shorts */
+  .shorts-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Shrink search */
+  .search {
+    max-width: 320px;
+  }
+
+  /* Hide "Create" button text, keep icon */
+  .create span {
+    display: none;
+  }
+}
+
+
+/* ── Large phones / small tablets (≤ 768px) ── */
+@media (max-width: 768px) {
+
+  /* Hide sidebar completely */
+  .sidebar {
+    display: none;
+  }
+
+  /* Full width content */
+  .content {
+    padding: 12px;
+  }
+
+  /* Single column videos */
+  .videos-section {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+  }
+
+  /* 2 shorts */
+  .shorts-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tighter navbar */
+  .navbar {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  /* Shrink search */
+  .search {
+    max-width: 240px;
+    margin: 0 8px;
+  }
+
+  /* Hide mic button */
+  .mike {
+    display: none;
+  }
+
+  /* Smaller logo text */
+  .logo::after {
+    font-size: 16px;
+    left: 72px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Footer disclaimer stacks better */
+  .footer-disclaimer {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-credits {
+    padding: 20px;
+  }
+}
+
+
+/* ── Small phones (≤ 480px) ── */
+@media (max-width: 480px) {
+
+  /* Stack search below navbar */
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px;
+  }
+
+  .search {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+    margin: 6px 0 2px;
+  }
+
+  /* Sidebar stays hidden */
+  .sidebar {
+    display: none;
+  }
+
+  /* 1 short per row on very small screens */
+  .shorts-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Content padding */
+  .content {
+    padding: 8px;
+  }
+
+  /* Filter bar scrolls smaller */
+  #filter {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  #filter button {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  /* Shorts heading smaller */
+  .shorts-section h2 {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-disclaimer {
+    padding: 14px 16px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-credits {
+    padding: 16px;
+    gap: 6px;
+  }
+}

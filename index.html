@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =====================
+         ESSENTIAL META TAGS
+         ===================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>YourTube – Home Feed | Student Project by Aarya Bhatt</title>
+    <meta
+      name="description"
+      content="YourTube is a YouTube-inspired video platform UI built with HTML and CSS as a student project by Aarya Bhatt. Browse videos, shorts, and more."
+    />
+    <meta
+      name="keywords"
+      content="YourTube, student project, HTML CSS project, video platform UI, Aarya Bhatt, web development"
+    />
+    <meta name="author" content="Aarya Bhatt" />
+    <!-- Prevent search engines from indexing a student/demo project -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- =====================
+         OPEN GRAPH (Social Sharing)
+         ===================== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="YourTube" />
+    <meta property="og:title" content="YourTube – Home Feed | Student Project by Aarya Bhatt" />
+    <meta
+      property="og:description"
+      content="A YouTube-inspired video platform UI built with HTML and CSS. A student project by Aarya Bhatt."
+    />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <!-- Replace with your actual deployed URL -->
+    <meta property="og:image" content="https://yourdomain.com/image/LOGO-removebg-preview.png" />
+
+    <!-- =====================
+         TWITTER CARD
+         ===================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YourTube – Student Project by Aarya Bhatt" />
+    <meta
+      name="twitter:description"
+      content="A YouTube-inspired video platform UI built with HTML and CSS."
+    />
+    <meta name="twitter:image" content="https://yourdomain.com/image/LOGO-removebg-preview.png" />
+
+    <!-- =====================
+         CANONICAL URL
+         ===================== -->
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <!-- Replace with your actual deployed URL -->
+
+    <!-- =====================
+         FAVICON (add a real favicon.ico to your project root)
+         ===================== -->
+    <link rel="icon" href="/image/LOGO-removebg-preview.png" type="image/png" />
+
+    <!-- =====================
+         STYLESHEETS
+         ===================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- =====================
+         STRUCTURED DATA (JSON-LD)
+         Helps search engines understand your site
+         ===================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "YourTube",
+        "description": "A YouTube-inspired video platform UI built as a student project.",
+        "author": {
+          "@type": "Person",
+          "name": "Aarya Bhatt"
+        },
+        "url": "https://yourdomain.com/"
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- =====================
+         SKIP NAVIGATION LINK
+         Accessibility + SEO best practice
+         ===================== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- =====================
+         HEADER
+         ===================== -->
+    <header role="banner">
+      <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <!-- LOGO — linked to homepage, acts as h1-equivalent landmark -->
+        <a href="/" class="logo" aria-label="YourTube – Go to homepage"></a>
+
+        <!-- SEARCH FORM — use <form> + <label> for accessibility & SEO -->
+        <div class="search" role="search">
+          <div class="searchbox">
+            <label for="search-input" class="visually-hidden">Search YourTube</label>
+            <input
+              type="search"
+              id="search-input"
+              name="q"
+              placeholder="Search"
+              autocomplete="off"
+              aria-label="Search YourTube"
+            />
+            <button class="search-btn" type="button" aria-label="Submit search">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </div>
+          <button class="mike" type="button" aria-label="Search by voice">
+            <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- RIGHT SIDE ACTIONS -->
+        <div class="navbar-actions">
+          <button class="create" type="button" aria-label="Create new video">
+            <i class="fa-regular fa-plus" aria-hidden="true"></i> Create
+          </button>
+          <button class="bell" type="button" aria-label="Notifications (9 or more unread)">
+            <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          </button>
+          <button class="icon" type="button" aria-label="User account">
+            <i class="fa-solid fa-circle-user" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- FILTER / CATEGORY BAR -->
+      <nav id="filter" class="filter" aria-label="Video category filters">
+        <button class="active" aria-pressed="true">All</button>
+        <button aria-pressed="false">Music</button>
+        <button aria-pressed="false">Mixes</button>
+        <button aria-pressed="false">Source code</button>
+        <button aria-pressed="false">Computer programming</button>
+        <button aria-pressed="false">Manhuas</button>
+        <button aria-pressed="false">Podcasts</button>
+        <button aria-pressed="false">Colleges</button>
+        <button aria-pressed="false">Gaming</button>
+        <button aria-pressed="false">Reverberation</button>
+        <button aria-pressed="false">Indian pop</button>
+        <button aria-pressed="false">Freestyle rap</button>
+        <button aria-pressed="false">Thrillers</button>
+        <button aria-pressed="false">Gadgets</button>
+      </nav>
+    </header>
+
+    <!-- =====================
+         MAIN
+         ===================== -->
+    <main id="main-content" role="main">
+
+      <!-- SIDEBAR -->
+      <aside id="sidebar" class="sidebar" aria-label="Site navigation">
+
+        <!-- Top Navigation -->
+        <nav class="sidebar-section-I" aria-label="Primary navigation">
+          <a href="/" class="sidebar-item active" aria-current="page">
+            <span class="icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
+            <span class="label">Home</span>
+          </a>
+          <a href="/shorts" class="sidebar-item">
+            <span class="icon"><i class="fa-solid fa-film" aria-hidden="true"></i></span>
+            <span class="label">Shorts</span>
+          </a>
+        </nav>
+
+        <hr aria-hidden="true" />
+
+        <!-- Subscriptions -->
+        <nav class="sidebar-section" aria-label="Subscriptions">
+          <h2 class="sidebar-heading">Subscriptions</h2>
+
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="Muse Asia channel avatar"></span>
+            <span class="label">Muse Asia</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="Firstpost channel avatar"></span>
+            <span class="label">Firstpost</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="Muse India channel avatar"></span>
+            <span class="label">Muse India</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="MohitVerse channel avatar"></span>
+            <span class="label">MohitVerse</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="Apna College channel avatar"></span>
+            <span class="label">Apna College</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="The Sham Sharma Show channel avatar"></span>
+            <span class="label">The Sham Sharma Show</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon" role="img" aria-label="SR Pay channel avatar"></span>
+            <span class="label">SR Pay</span>
+          </a>
+          <button class="sidebar-item show-more-btn" type="button" aria-expanded="false">
+            <span class="icon"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span>
+            <span class="label">Show more</span>
+          </button>
+        </nav>
+
+        <hr aria-hidden="true" />
+
+        <!-- You Section -->
+        <nav class="sidebar-section-II" aria-label="Your library">
+          <h2 class="sidebar-heading">You</h2>
+
+          <a href="#" class="sidebar-item">
+            <span class="icon"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></span>
+            <span class="label">History</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon"><i class="fa-solid fa-bars" aria-hidden="true"></i></span>
+            <span class="label">Library</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></span>
+            <span class="label">Watch later</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i></span>
+            <span class="label">Liked videos</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="icon"><i class="fa-solid fa-music" aria-hidden="true"></i></span>
+            <span class="label">Songs</span>
+          </a>
+          <button class="sidebar-item show-more-btn" type="button" aria-expanded="false">
+            <span class="icon"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span>
+            <span class="label">Show more</span>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- =====================
+           CONTENT AREA
+           ===================== -->
+      <div id="content" class="content">
+
+        <!-- Hidden H1 — every page must have exactly ONE h1 for SEO -->
+        <h1 class="visually-hidden">YourTube Home Feed – Recommended Videos</h1>
+
+        <!-- TOP VIDEOS SECTION -->
+        <section class="videos-section top-videos" aria-label="Recommended videos">
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch HTML and CSS Full Course – Beginner to Pro by Apna College">
+              <img
+                src="/image/video-1.jpg"
+                alt="HTML and CSS Full Course – Beginner to Pro tutorial thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">HTML &amp; CSS Full Course – Beginner to Pro</a></h3>
+              <p><span class="channel-name">Apna College</span> · <span>18M views</span> · <time datetime="2021-01-01">4 years ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch JavaScript Full Course by Apna College">
+              <img
+                src="/image/video-2.jpg"
+                alt="JavaScript Full Course featuring Shraddha Didi – Apna College tutorial thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">JavaScript Full Course ft. Shraddha Didi</a></h3>
+              <p><span class="channel-name">Apna College</span> · <span>2M views</span> · <time datetime="2024-01-01">1 year ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Case 1 by SR Pay">
+              <img
+                src="/image/video-3.jpg"
+                alt="SR Pay Case 1 video thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Case 1</a></h3>
+              <p><span class="channel-name">SR Pay</span> · <span>6.7K views</span> · <time>8 hours ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Case 2 by SR Pay">
+              <img
+                src="/image/video-4.jfif"
+                alt="SR Pay Case 2 video thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Case 2</a></h3>
+              <p><span class="channel-name">SR Pay</span> · <span>1.2M views</span> · <time>3 days ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch India Vs Bangladesh by The Shyam Sharma Show">
+              <img
+                src="/image/video-5.jpg"
+                alt="India Vs Bangladesh analysis – The Shyam Sharma Show thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">India Vs Bangladesh</a></h3>
+              <p><span class="channel-name">TheShyam Sharma Show</span> · <span>500K views</span> · <time>1 month ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Best of 2021 Meltdowns by The Shyam Sharma Show">
+              <img
+                src="/image/video-6.jpg"
+                alt="Best of 2021 Meltdowns compilation – The Shyam Sharma Show thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Best of 2021 Meltdowns</a></h3>
+              <p><span class="channel-name">TheShyam Sharma Show</span> · <span>900K views</span> · <time>2 weeks ago</time></p>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- SHORTS SECTION -->
+        <section class="shorts-section" aria-label="Shorts videos">
+          <h2>Shorts</h2>
+
+          <div class="shorts-row">
+
+            <article class="short-card">
+              <a href="#" aria-label="Watch Short: Thumbnail Design Tips">
+                <img
+                  src="/image/short-1.avif"
+                  alt="Thumbnail Design Tips – Short video preview"
+                  loading="lazy"
+                  width="180"
+                  height="320"
+                />
+              </a>
+              <p>Thumbnail Design</p>
+            </article>
+
+            <article class="short-card">
+              <a href="#" aria-label="Watch Short: Why is Internet Important">
+                <img
+                  src="/image/short-2.avif"
+                  alt="Why is the Internet Important – Short video preview"
+                  loading="lazy"
+                  width="180"
+                  height="320"
+                />
+              </a>
+              <p>Why is Internet Important</p>
+            </article>
+
+            <article class="short-card">
+              <a href="#" aria-label="Watch Short: Tsunamis explained">
+                <img
+                  src="/image/short-3.avif"
+                  alt="Tsunamis explained – Short video preview"
+                  loading="lazy"
+                  width="180"
+                  height="320"
+                />
+              </a>
+              <p>Tsunamis</p>
+            </article>
+
+            <article class="short-card">
+              <a href="#" aria-label="Watch Short: Passive Income Ideas">
+                <img
+                  src="/image/short-4.avif"
+                  alt="Passive Income Ideas – Short video preview"
+                  loading="lazy"
+                  width="180"
+                  height="320"
+                />
+              </a>
+              <p>Passive Income Ideas</p>
+            </article>
+
+            <article class="short-card">
+              <a href="#" aria-label="Watch Short: Thumbnail Tips">
+                <img
+                  src="/image/short-5.avif"
+                  alt="Thumbnail design tips – Short video preview"
+                  loading="lazy"
+                  width="180"
+                  height="320"
+                />
+              </a>
+              <p>Thumbnails</p>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- BOTTOM VIDEOS SECTION -->
+        <section class="videos-section bottom-videos" aria-label="More recommended videos">
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Vantage by Firstpost">
+              <img
+                src="/image/video-7.jpg"
+                alt="Vantage news show – Firstpost video thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Vantage</a></h3>
+              <p><span class="channel-name">First Post</span> · <span>1.5M views</span> · <time>6 months ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Pakistan Vs The Taliban by Firstpost">
+              <img
+                src="/image/video-8.jpg"
+                alt="Pakistan Vs The Taliban geopolitical analysis – Firstpost thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Pakistan Vs The Taliban</a></h3>
+              <p><span class="channel-name">First Post</span> · <span>2.1M views</span> · <time>1 year ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Reaction on Dhruv Rathee by MohitVerse">
+              <img
+                src="/image/video-9.jpg"
+                alt="Reaction on Dhruv Rathee – MohitVerse video thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Reaction on Dhruv Rathee</a></h3>
+              <p><span class="channel-name">MohitVerse</span> · <span>700K views</span> · <time>3 weeks ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Reaction on EKAKI by MohitVerse">
+              <img
+                src="/image/video-10.jpg"
+                alt="Reaction on EKAKI – MohitVerse video thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Reaction on EKAKI</a></h3>
+              <p><span class="channel-name">MohitVerse</span> · <span>350K views</span> · <time>2 months ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Chained Soldier anime by Muse Asia">
+              <img
+                src="/image/video-11.jpg"
+                alt="Chained Soldier anime episode – Muse Asia thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Chained Soldier</a></h3>
+              <p><span class="channel-name">MuseAsia</span> · <span>980K views</span> · <time>5 months ago</time></p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a href="#" aria-label="Watch Re:Zero anime by Muse India">
+              <img
+                src="/image/video-12.jpg"
+                alt="Re:Zero anime episode – Muse India thumbnail"
+                loading="lazy"
+                width="320"
+                height="180"
+              />
+            </a>
+            <div class="video-info">
+              <h3><a href="#">Re:Zero</a></h3>
+              <p><span class="channel-name">MuseIndia</span> · <span>420K views</span> · <time>1 month ago</time></p>
+            </div>
+          </article>
+
+        </section>
+      </div>
+      <!-- END #content -->
+
+    </main>
+
+    <!-- =====================
+         FOOTER
+         ===================== -->
+    <footer role="contentinfo">
+
+      <!-- DISCLAIMER BANNER -->
+      <aside class="footer-disclaimer" aria-label="Project disclaimer">
+        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <p>
+          <strong>Disclaimer:</strong> YourTube is a
+          <strong>student project</strong> created for educational purposes
+          only. It is <strong>not a real website</strong> and is not affiliated
+          with, endorsed by, or connected to YouTube, Google, or any of their
+          subsidiaries. All channel names, thumbnails, and content referenced
+          are property of their respective owners.
+        </p>
+      </aside>
+
+      <!-- CREDITS -->
+      <div class="footer-credits">
+        <p class="footer-logo" aria-label="YourTube logo">Your<span>Tube</span></p>
+        <p class="footer-name">
+          Designed &amp; Developed by <strong>Aarya Bhatt</strong>
+        </p>
+        <p class="footer-copy">
+          <small>&copy; <time datetime="2025">2025</time> YourTube. All Rights Reserved.</small>
+        </p>
+        <p class="footer-note">
+          <small>Built with HTML, CSS &amp; FontAwesome &nbsp;|&nbsp; For Academic Use Only</small>
+        </p>
+      </div>
+
+    </footer>
+
+  </body>
+</html>

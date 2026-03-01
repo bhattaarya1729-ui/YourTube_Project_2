@@ -60,7 +60,7 @@ No build tools or dependencies required. Just open it in a browser.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/yourtube.git
+https://github.com/bhattaarya1729-ui/YourTube_Project_2.git
 
 # 2. Navigate into the folder
 cd yourtube
@@ -69,7 +69,7 @@ cd yourtube
 open index.html
 ```
 
-> **Tip:** Use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code for the best development experience.
+> **Tip:** Use the [Live Server](https://yourtube-project-2.vercel.app/) extension in VS Code for the best development experience.
 
 ---
 
@@ -108,7 +108,7 @@ YourTube is a **student project** created for educational purposes only. It is n
 
 **Aarya Bhatt**
 
-- GitHub: [@your-username](https://github.com/your-username)
+- GitHub: https://github.com/bhattaarya1729-ui
 
 ---
 
